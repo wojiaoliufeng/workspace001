@@ -1,0 +1,55 @@
+package day05;
+import java.util.Arrays;
+//一个Java文件可以定义很多类 但是公开类只有一个
+public class day05 {
+    public static void main(String[] args) {
+
+    }
+}
+ class Dog{
+     private String name;  //私有的只有本类可以使用
+     int age;   //默认的同包和本类都可以使用，不同包不能够访问
+     protected String color;//受保护的本类同包和子类可以访问 ,不同包不能访问
+     public String sex;
+     //
+     void eat(){
+         System.out.println("狗狗开始吃");
+     }
+     String getColor(){
+         color="pink";
+         return color;
+     }
+     public static void main(String[] args) {
+        Dog d=new Dog();
+        d.eat();
+        d.color="red";
+     }
+
+}
+class hashiqi extends Dog{
+    public  void test(){
+        System.out.println(super.color);
+    }
+    public static void main(String[] args) {
+        Dog d=new Dog();
+        System.out.println(d.color);
+        System.out.println(d.getColor());
+        d.eat();
+    }
+}
+class Cat{
+    //成员变量 类里面 方法外面
+    public String name;
+    public void setName(String name){
+        //局部变量 方法里面
+        this.name=name;
+    }
+    public void print(){
+        System.out.println(name);
+    }
+    public static void main(String[] args) {
+        Cat c=new Cat();
+        c.print();
+        c.setName("皮卡丘");
+    }
+}
