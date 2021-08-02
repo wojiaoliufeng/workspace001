@@ -115,14 +115,15 @@ public class BankAccount {
         Scanner sc=new Scanner(System.in);
         System.out.println("*****枫哥哥超棒银行系统登陆成功*****");
         System.out.println("尊敬的会员"+bank.name+"，请选择操作:");
-        System.out.println("1.存款        2.取款      3.查询余额    ");
+        System.out.println("1.存款        2.取款      3.查询余额    4.返回主菜单    5.退出系统"   );
         System.out.print("请输入编号:");
         int num=sc.nextInt();
         System.out.println("**********************************");
         switch (num){
             case 1:bank.addMoney(bank);break;
             case 2:bank.minusMoney(bank);break;
-            case 3:bank.getMoney(bank);
+            case 3:bank.getMoney(bank);break;
+            case 4:bank.load(bank);break;
         }
     }
     public void load(BankAccount bank){
@@ -165,7 +166,7 @@ public class BankAccount {
                     break;
                 }
             case 2:
-                System.out.println("退出成功");
+                System.out.println("退出成功!!!");
                 break;
             default:
                 break;
