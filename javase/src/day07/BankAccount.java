@@ -124,6 +124,8 @@ public class BankAccount {
             case 2:bank.minusMoney(bank);break;
             case 3:bank.getMoney(bank);break;
             case 4:bank.load(bank);break;
+            case 5:
+                System.out.println("退出成功!");break;
         }
     }
     public void load(BankAccount bank){
@@ -161,6 +163,7 @@ public class BankAccount {
                 }
                 if(j<3){
                     bank.menu(bank);
+                    break;
                 }else {
                     System.out.println("你的机会用尽,已经退出登录系统");
                     break;
