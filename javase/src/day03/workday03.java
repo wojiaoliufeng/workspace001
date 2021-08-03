@@ -62,9 +62,10 @@ public class workday03 {
                 }
             }
             if(j==arr.length){
-                m++;
+
                 arrs[m]=arr[i];
                 arrnums[m]=1;
+                m++;
             }
         }
         System.out.println(Arrays.toString(arrs));
